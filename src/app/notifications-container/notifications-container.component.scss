@@ -1,0 +1,25 @@
+:host{
+  display: flex;
+  position: fixed;
+  width: 300px;
+  height: auto;
+  max-height: 100vh;
+  overflow: auto;
+  top: 80px;
+  right: 15px;
+  z-index: 99;
+}
+
+.wrap-notifications{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 500px){
+  :host{
+    width: 90%;
+    top: 20px;
+    left: auto;
+  }
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NotificationService } from './notification.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,28 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'notifications';
+
+  constructor(public notiSvc: NotificationService){
+
+  }
+
+
+  addNotification():void{
+
+    setTimeout(() =>{
+      this.notiSvc.onShowNotification({ title: 'El convenio se actualizó correctamente',text: 'El convenio se actualizó correctamente', icon: 'success' })
+    },1000)
+
+    setTimeout(() =>{
+      this.notiSvc.onShowNotification({ title: '',text: '', icon: 'warning' })
+    },2000)
+
+    setTimeout(() =>{
+      this.notiSvc.onShowNotification({ title: 'El convenio se actualizó correctamente',text: 'El convenio se actualizó correctamente', icon: 'info' })
+    },3000)
+
+    setTimeout(() =>{
+      this.notiSvc.onShowNotification({ title: 'Test',text: 'El convenio se actualizó correctamente', icon: 'danger' })
+    },4000)
+  }
 }

@@ -1,0 +1,60 @@
+:host{
+  cursor: pointer;
+}
+
+.wrap-notification{
+  display: flex;
+  padding: 10px 15px;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  color: #FFFFFF;
+  min-height: 50px;
+
+  .icon{
+    height: 30px;
+    width: 30px;
+    flex: 0 0 30px;
+    margin-right: 5px;
+  }
+
+  .icon-close{
+    height: 20px;
+    width: 20px;
+    flex: 0 0 20px;
+    cursor: pointer;
+  }
+
+  .wrap-texts{
+    flex: auto;
+    h3{
+      font-size: 16px;
+      width: 100%;
+    }
+
+    p{
+      font-size: 14px;
+      width: 100%;
+    }
+  }
+}
+
+.success{
+  background-color: #386177;
+}
+
+.warning{
+  background-color: #e09f26;
+}
+
+.danger{
+  background-color: #da2d2d;
+}
+
+.info{
+  background-color: #1976d2;
+}
+
+.wrap-notification:hover{
+  box-shadow: 0px 10px 70px -3px rgba(0,0,0,0.1);
+}

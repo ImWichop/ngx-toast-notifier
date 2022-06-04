@@ -9,13 +9,14 @@ import { NotificationService } from '../notification.service';
 })
 export class NotificationComponent implements OnInit {
   @Input() notificationData!: INotification
+  @Input() idx!: number
   constructor(private notiSvc: NotificationService) { }
 
   ngOnInit(): void {
   }
 
   onRemove():void{
-    this.notiSvc.onRemove(this.notificationData.id)
+    this.notiSvc.onRemove(this.idx)
   }
 
 }

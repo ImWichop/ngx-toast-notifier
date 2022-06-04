@@ -18,8 +18,11 @@
 
 @media only screen and (max-width: 500px){
   :host{
-    width: 90%;
+    width: 95%;
     top: 20px;
-    left: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
   }
 }

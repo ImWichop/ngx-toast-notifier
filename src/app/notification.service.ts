@@ -17,18 +17,16 @@ export class NotificationService {
    }
 
    onShowNotification(notification: INotification): void{
-     const id = Date.now()
      this.$notifications.next([
        ...this.notifications,
        {
-         ...notification,
-         id
+         ...notification
        }
      ])
    }
 
-   onRemove(id: number | undefined):void{
-     const currentNotifications = this.notifications.filter((x: INotification) => x.id !== id)
-     this.$notifications.next(currentNotifications)
+   onRemove(idx: number):void{
+      this.notifications.splice(idx,1)
+      this.$notifications.next(this.notifications)
    }
 }

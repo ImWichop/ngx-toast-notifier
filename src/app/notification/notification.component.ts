@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { INotification } from '../interfaces/notifications';
 import { NotificationService } from '../notification.service';
 
@@ -7,16 +7,13 @@ import { NotificationService } from '../notification.service';
   templateUrl: './notification.component.html',
   styleUrls: ['./notification.component.scss'],
 })
-export class NotificationComponent implements OnInit {
+export class NotificationComponent  {
   @Input() notificationData!: INotification
   @Input() idx!: number
-  constructor(private notiSvc: NotificationService) { }
-
-  ngOnInit(): void {
-  }
+  constructor(private notificationSvc: NotificationService) { }
 
   onRemove():void{
-    this.notiSvc.onRemove(this.idx)
+    this.notificationSvc.onRemove(this.idx)
   }
 
 }

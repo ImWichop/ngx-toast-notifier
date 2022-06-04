@@ -22,11 +22,11 @@ import { NotificationService } from '../notification.service';
   ]
 })
 export class NotificationsContainerComponent implements OnInit {
-  notis!: Observable<INotification[]>;
-  constructor(private notiSvc: NotificationService) { }
+  notis!: Observable<INotification[]>
+  constructor(private notificationSvc: NotificationService) { }
 
   ngOnInit(): void {
-    this.notis = this.notiSvc.$notificationsObs;
+    this.notis = this.notificationSvc.$notificationsObs
   }
 
 }

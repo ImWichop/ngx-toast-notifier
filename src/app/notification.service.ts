@@ -6,8 +6,8 @@ import { INotification } from './interfaces/notifications';
   providedIn: 'root'
 })
 export class NotificationService {
-  private $notifications : BehaviorSubject<INotification[]> = new BehaviorSubject<INotification[]>([]);
-  public $notificationsObs = this.$notifications.asObservable();
+  private $notifications : BehaviorSubject<INotification[]> = new BehaviorSubject<INotification[]>([])
+  public $notificationsObs = this.$notifications.asObservable()
   constructor() {
     
    }
@@ -25,7 +25,7 @@ export class NotificationService {
      ])
    }
 
-   onRemove(idx: number):void{
+   onRemove(idx: number): void{
       this.notifications.splice(idx,1)
       this.$notifications.next(this.notifications)
    }

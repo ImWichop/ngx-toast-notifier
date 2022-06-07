@@ -118,6 +118,46 @@
           }
         }
       }
+    },
+    "ngx-toast-notifier": {
+      "projectType": "library",
+      "root": "projects/ngx-toast-notifier",
+      "sourceRoot": "projects/ngx-toast-notifier/src",
+      "prefix": "ngx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-toast-notifier/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-toast-notifier/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-toast-notifier/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-toast-notifier/src/test.ts",
+            "tsConfig": "projects/ngx-toast-notifier/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-toast-notifier/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ngx-toast-notifier/**/*.ts",
+              "projects/ngx-toast-notifier/**/*.html"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "notifications"

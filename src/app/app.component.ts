@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NotificationService } from './notification.service';
+import { NgxToastNotifierService } from 'ngx-toast-notifier';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ import { NotificationService } from './notification.service';
 export class AppComponent {
   title = 'notifications';
 
-  constructor(public notiSvc: NotificationService){
+  constructor(public notiSvc: NgxToastNotifierService){
 
   }
 

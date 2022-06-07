@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { NotificationsContainerComponent } from './notifications-container/notifications-container.component';
 import { NotificationComponent } from './notification/notification.component';
+import { NgxToastNotifierModule } from 'ngx-toast-notifier';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NotificationComponent } from './notification/notification.component';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxToastNotifierModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

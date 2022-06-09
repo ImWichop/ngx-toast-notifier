@@ -13,7 +13,7 @@ import { NgxToastNotifierModule } from 'ngx-toast-notifier';
     BrowserModule,
     BrowserAnimationsModule,
     NgxToastNotifierModule.forRoot({
-      timeOut: 3000
+      timeOut: 5000
     })
   ],
   providers: [],

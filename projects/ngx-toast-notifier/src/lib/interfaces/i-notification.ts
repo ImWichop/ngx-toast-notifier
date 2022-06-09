@@ -10,7 +10,6 @@ export interface INotification{
 
 export interface GlobalConfiguration{
   timeOut: number;
-  easing: number;
   bgColors: Partial<BgColors>
 }
 
@@ -23,7 +22,6 @@ export interface BgColors{
 
 export const DefaultGlobalConfig: GlobalConfiguration = {
   timeOut: 3000,
-  easing: 3000,
   bgColors: {
     success: '#54a254',
     warning: '#e09f26',

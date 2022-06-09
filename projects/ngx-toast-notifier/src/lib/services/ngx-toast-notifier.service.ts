@@ -70,8 +70,8 @@ export class NgxToastNotifierService {
     this.onShowNotification(notification);
   }
 
-  onRemove(idx: number): void {
-    this.notifications.splice(idx, 1);
+  private onRemove(): void {
+    this.notifications.shift()
     this.$notifications.next(this.notifications);
   }
 
@@ -82,5 +82,9 @@ export class NgxToastNotifierService {
         ...notification,
       },
     ]);
+
+    setTimeout(() => {
+      this.onRemove()
+    }, this.defaultConfig.config.timeOut ? this.defaultConfig.config.timeOut : this.defaultConfig.default.timeOut);
   }
 }

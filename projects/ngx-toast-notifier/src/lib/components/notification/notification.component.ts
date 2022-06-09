@@ -40,15 +40,6 @@ import { NgxToastNotifierService } from '../../services/ngx-toast-notifier.servi
         <h3>{{ notificationData.title }}</h3>
         <p>{{ notificationData.text }}</p>
       </div>
-
-      <div class="icon-close" (click)="onRemove()">
-        <svg viewBox="0 0 24 24">
-          <path
-            fill="currentColor"
-            d="M20 6.91L17.09 4L12 9.09L6.91 4L4 6.91L9.09 12L4 17.09L6.91 20L12 14.91L17.09 20L20 17.09L14.91 12L20 6.91Z"
-          />
-        </svg>
-      </div>
     </div>
   `,
   styles: [
@@ -72,14 +63,7 @@ import { NgxToastNotifierService } from '../../services/ngx-toast-notifier.servi
         flex: 0 0 30px;
         margin-right: 5px;
       }
-
-      .icon-close {
-        height: 20px;
-        width: 20px;
-        flex: 0 0 20px;
-        cursor: pointer;
-      }
-
+      
       .wrap-texts {
         flex: auto;
       }
@@ -102,10 +86,6 @@ import { NgxToastNotifierService } from '../../services/ngx-toast-notifier.servi
 })
 export class NotificationComponent {
   @Input() notificationData!: INotification;
-  @Input() idx!: number;
   constructor(private notificationSvc: NgxToastNotifierService) {}
 
-  onRemove(): void {
-    this.notificationSvc.onRemove(this.idx);
-  }
 }

@@ -10,8 +10,7 @@ import { NgxToastNotifierService } from '../services/ngx-toast-notifier.service'
     <div class="wrap-notifications">
       <ngx-notification
         [notificationData]="item"
-        [idx]="idx"
-        *ngFor="let item of $notifications | async; let idx = index"
+        *ngFor="let item of $notifications | async"
         @onEnterLeave
       >
       </ngx-notification>

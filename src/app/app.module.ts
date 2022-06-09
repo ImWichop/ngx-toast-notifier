@@ -16,7 +16,9 @@ import { NgxToastNotifierModule } from 'ngx-toast-notifier';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    NgxToastNotifierModule.forRoot()
+    NgxToastNotifierModule.forRoot({
+      timeOut: 3000
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,32 @@
 {
   "name": "ngx-toast-notifier",
   "version": "0.0.1",
+  "description": "This is a nofitications library for Angular",
+  "homepage": "https://github.com/ImWicho/ngx-toast-notifier#readme",
+  "bugs": {
+    "url" : "https://github.com/ImWicho/ngx-toast-notifier/issues",
+    "email" : "luis.carrilloo.perez@gmail.com"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Luis Carrillo",
+    "email": "luis.carrilloo.perez@gmail.com",
+    "url": "https://twitter.com/imwichop"
+  },
+  "keywords": [
+    "ng2",
+    "ngx",
+    "ngx-toast-notifier",
+    "toastr-ng2",
+    "angular",
+    "angular2",
+    "typescript",
+    "alert",
+    "toast",
+    "toastr",
+    "angular toastr",
+    "notifications"
+  ],
   "peerDependencies": {
     "@angular/common": "^13.3.0",
     "@angular/core": "^13.3.0"

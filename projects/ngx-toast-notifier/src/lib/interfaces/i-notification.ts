@@ -4,6 +4,7 @@ export interface INotification{
   title: string;
   text: string;
   icon: 'success' | 'warning' | 'info' | 'danger';
+  bgColor: string | undefined;
 }
 
 
@@ -24,17 +25,17 @@ export const DefaultGlobalConfig: GlobalConfiguration = {
   timeOut: 3000,
   easing: 3000,
   bgColors: {
-    success: '#386177',
+    success: '#54a254',
     warning: '#e09f26',
     info: '#1976d2',
     danger: '#da2d2d',
   }
 }
 
-export interface ToastToken{
+export interface NotificationToken{
   default: GlobalConfiguration,
   config: Partial<GlobalConfiguration>
 }
 
 
-export const TOAST_CONFIG = new InjectionToken<ToastToken>('ToastConfig');
+export const NOTIFICATION_CONFIG = new InjectionToken<NotificationToken>('NotificationConfig');

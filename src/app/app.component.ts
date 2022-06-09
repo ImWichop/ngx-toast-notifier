@@ -14,22 +14,19 @@ export class AppComponent {
   }
 
 
-  addNotification():void{
+  addSuccess():void{
+    this.notiSvc.onSuccess('El convenio se actualizó correctamente','El convenio se actualizó correctamente')
+  }
 
-    setTimeout(() =>{
-      this.notiSvc.onShowNotification({ title: 'El convenio se actualizó correctamente',text: 'El convenio se actualizó correctamente', icon: 'success' })
-    },1000)
+  addInfo():void{
+    this.notiSvc.onInfo('El convenio se actualizó correctamente','El convenio se actualizó correctamente')
+  }
 
-    setTimeout(() =>{
-      this.notiSvc.onShowNotification({ title: '',text: '', icon: 'warning' })
-    },2000)
+  addWarning():void{
+    this.notiSvc.onWarning('El convenio se actualizó correctamente','El convenio se actualizó correctamente')
+  }
 
-    setTimeout(() =>{
-      this.notiSvc.onShowNotification({ title: 'El convenio se actualizó correctamente',text: 'El convenio se actualizó correctamente', icon: 'info' })
-    },3000)
-
-    setTimeout(() =>{
-      this.notiSvc.onShowNotification({ title: 'Test',text: 'El convenio se actualizó correctamente', icon: 'danger' })
-    },4000)
+  addDanger():void{
+    this.notiSvc.onDanger('El convenio se actualizó correctamente','El convenio se actualizó correctamente')
   }
 }

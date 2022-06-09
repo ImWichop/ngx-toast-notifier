@@ -1,36 +1,86 @@
 import { Inject, Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { INotification, ToastToken, TOAST_CONFIG } from '../interfaces/i-notification';
+import {
+  INotification,
+  NotificationToken,
+  NOTIFICATION_CONFIG,
+} from '../interfaces/i-notification';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class NgxToastNotifierService {
-  private $notifications : BehaviorSubject<INotification[]> = new BehaviorSubject<INotification[]>([])
-  public $notificationsObs = this.$notifications.asObservable()
-  public defaultConfig!: ToastToken
-  constructor(@Inject(TOAST_CONFIG) config: ToastToken) {
+  private $notifications: BehaviorSubject<INotification[]> =
+    new BehaviorSubject<INotification[]>([]);
+  public $notificationsObs = this.$notifications.asObservable();
+  public defaultConfig!: NotificationToken;
+  constructor(@Inject(NOTIFICATION_CONFIG) config: NotificationToken) {
     this.defaultConfig = config;
-    console.log(config);
-    console.log(this.defaultConfig);
-    
   }
 
-   get notifications(): INotification[]{
-     return this.$notifications.value
-   }
+  get notifications(): INotification[] {
+    return this.$notifications.value;
+  }
 
-   onShowNotification(notification: INotification): void{
-     this.$notifications.next([
-       ...this.notifications,
-       {
-         ...notification
-       }
-     ])
-   }
+  onSuccess(title: string, text: string): void {
+    const notification: INotification = {
+      text,
+      title,
+      icon: 'success',
+      bgColor: this.defaultConfig.config.bgColors?.success
+        ? this.defaultConfig.config.bgColors.success
+        : this.defaultConfig.default.bgColors.success,
+    };
+    this.onShowNotification(notification);
+  }
 
-   onRemove(idx: number): void{
-      this.notifications.splice(idx,1)
-      this.$notifications.next(this.notifications)
-   }
+  onInfo(title: string, text: string): void {
+    const notification: INotification = {
+      text,
+      title,
+      icon: 'info',
+      bgColor: this.defaultConfig.config.bgColors?.info
+        ? this.defaultConfig.config.bgColors.info
+        : this.defaultConfig.default.bgColors.info,
+    };
+    this.onShowNotification(notification);
+  }
+
+  onWarning(title: string, text: string): void {
+    const notification: INotification = {
+      text,
+      title,
+      icon: 'warning',
+      bgColor: this.defaultConfig.config.bgColors?.warning
+        ? this.defaultConfig.config.bgColors.warning
+        : this.defaultConfig.default.bgColors.warning,
+    };
+    this.onShowNotification(notification);
+  }
+
+  onDanger(title: string, text: string): void {
+    const notification: INotification = {
+      text,
+      title,
+      icon: 'danger',
+      bgColor: this.defaultConfig.config.bgColors?.danger
+        ? this.defaultConfig.config.bgColors.danger
+        : this.defaultConfig.default.bgColors.danger,
+    };
+    this.onShowNotification(notification);
+  }
+
+  onRemove(idx: number): void {
+    this.notifications.splice(idx, 1);
+    this.$notifications.next(this.notifications);
+  }
+
+  private onShowNotification(notification: INotification): void {
+    this.$notifications.next([
+      ...this.notifications,
+      {
+        ...notification,
+      },
+    ]);
+  }
 }

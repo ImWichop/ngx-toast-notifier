@@ -7,12 +7,7 @@ import { NgxToastNotifierService } from '../../services/ngx-toast-notifier.servi
   template: `
     <div
       class="wrap-notification"
-      [ngClass]="{
-        success: notificationData.icon === 'success',
-        info: notificationData.icon === 'info',
-        warning: notificationData.icon === 'warning',
-        danger: notificationData.icon === 'danger'
-      }"
+      [ngStyle]="{'background-color' : notificationData.bgColor}"
     >
       <div class="icon-start">
         <svg viewBox="0 0 24 24" *ngIf="notificationData.icon === 'success'">
@@ -58,10 +53,9 @@ import { NgxToastNotifierService } from '../../services/ngx-toast-notifier.servi
   `,
   styles: [
     `
-      :host {
-        cursor: pointer;
+      :host{
+        cursor: default;
       }
-
       .wrap-notification {
         display: flex;
         padding: 10px 15px;
@@ -98,22 +92,6 @@ import { NgxToastNotifierService } from '../../services/ngx-toast-notifier.servi
       .wrap-texts p {
         font-size: 14px;
         width: 100%;
-      }
-
-      .success {
-        background-color: #386177;
-      }
-
-      .warning {
-        background-color: #e09f26;
-      }
-
-      .danger {
-        background-color: #da2d2d;
-      }
-
-      .info {
-        background-color: #1976d2;
       }
 
       .wrap-notification:hover {

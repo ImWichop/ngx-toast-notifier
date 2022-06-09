@@ -7,7 +7,7 @@ import { NgxToastNotifierService } from 'ngx-toast-notifier';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'notifications';
+  title = 'NGX-TOAST-NOTIFIER';
 
   constructor(public notiSvc: NgxToastNotifierService){
 
@@ -15,18 +15,18 @@ export class AppComponent {
 
 
   addSuccess():void{
-    this.notiSvc.onSuccess('El convenio se actualizó correctamente','El convenio se actualizó correctamente')
+    this.notiSvc.onSuccess('This is a success alert','This is a success alert')
   }
 
   addInfo():void{
-    this.notiSvc.onInfo('El convenio se actualizó correctamente','El convenio se actualizó correctamente')
+    this.notiSvc.onInfo('This is a info alert','This is a info alert')
   }
 
   addWarning():void{
-    this.notiSvc.onWarning('El convenio se actualizó correctamente','El convenio se actualizó correctamente')
+    this.notiSvc.onWarning('This is a warning alert','This is a warning alert')
   }
 
   addDanger():void{
-    this.notiSvc.onDanger('El convenio se actualizó correctamente','El convenio se actualizó correctamente')
+    this.notiSvc.onDanger('This is a danger alert','This is a danger alert')
   }
 }

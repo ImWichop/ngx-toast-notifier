@@ -1,0 +1,42 @@
+.overlay{
+  min-height: 100vh;
+  background-color: #212121;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1{
+    color: white;
+  }
+
+  .wrap-buttons{
+
+    button{
+      margin: 5px;
+      padding: 10px 15px;
+      font-family: 'Poppins', sans-serif;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .success{
+      background-color: #54a254;
+    }
+
+    .info{
+      background-color: #1976d2;
+    }
+
+    .warning{
+      background-color: #e09f26;
+    }
+
+    .danger{
+      background-color: #da2d2d;
+    }
+
+  }
+}

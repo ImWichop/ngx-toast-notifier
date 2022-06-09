@@ -1,6 +1,10 @@
-<app-notifications-container></app-notifications-container>
-<button (click)="addSuccess()">Add Alert</button>
-<button (click)="addInfo()">Add Alert</button>
-<button (click)="addWarning()">Add Alert</button>
-<button (click)="addDanger()">Add Alert</button>
+<div class="overlay">
+  <h1>Ngx-toast-notifier</h1>
+  <div class="wrap-buttons">
+    <button class="success" (click)="addSuccess()">Success Alert</button>
+    <button class="info" (click)="addInfo()">Info Alert</button>
+    <button class="warning" (click)="addWarning()">Warning Alert</button>
+    <button class="danger" (click)="addDanger()">Danger Alert</button>
+  </div>
+</div>
 <ngx-toast-notifier></ngx-toast-notifier>

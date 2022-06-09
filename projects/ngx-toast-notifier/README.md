@@ -1,3 +1,14 @@
+<div align="center">
+  <img src="https://raw.githubusercontent.com/ImWicho/ngx-toast-notifier/main/src/assets/main.png" width="600" alt="Angular Notifications">
+  <br>
+  <h1>ngx-toast-notifier</h1>
+  <br>
+      <img src="https://raw.githubusercontent.com/ImWicho/ngx-toast-notifier/main/src/assets/alerts.png" width="300" alt="Angular Notifications">
+        <img src="https://raw.githubusercontent.com/ImWicho/ngx-toast-notifier/main/src/assets/fullscreen.png" width="600" alt="Angular Notifications">
+  <br>
+  <br>
+</div>
+
 ## Dependencies
 
 Latest version available for each version of Angular

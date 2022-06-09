@@ -1,6 +1,6 @@
 {
   "name": "ngx-toast-notifier",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "This is a nofitications library for Angular",
   "homepage": "https://github.com/ImWicho/ngx-toast-notifier#readme",
   "bugs": {

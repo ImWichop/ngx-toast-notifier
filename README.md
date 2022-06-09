@@ -29,9 +29,6 @@ npm install ngx-toast-notifier --save
 npm install @angular/animations --save
 ```
 
-Don't want to use `@angular/animations`? See
-[Setup Without Animations](#setup-without-animations).
-
 ## Setup
 
 **step 1:** add NgxToastNotifierModule to app NgModule, make sure you have BrowserAnimationsModule as well

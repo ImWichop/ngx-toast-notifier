@@ -69,29 +69,31 @@ class MainModule {}
 }
 ```
 
+**Notifications use your global font-family**
+
 ## Use
 
 ```typescript
-import { NgxToastNotifierService } from 'ngx-toast-notifier';
+import { NgxToastService } from 'ngx-toast-notifier';
 
 @Component({...})
 export class YourComponent {
-  constructor(private notifierSvc: NgxToastNotifierService) {}
+  constructor(private ngxToastService: NgxToastService) {}
 
   addSuccess():void{
-    this.notifierSvc.onSuccess('This is a success alert','This is a success alert')
+    this.ngxToastService.onSuccess('This is a success alert','This is a success alert')
   }
 
   addInfo():void{
-    this.notifierSvc.onInfo('This is a info alert','This is a info alert')
+    this.ngxToastService.onInfo('This is a info alert','This is a info alert')
   }
 
   addWarning():void{
-    this.notifierSvc.onWarning('This is a warning alert','This is a warning alert')
+    this.ngxToastService.onWarning('This is a warning alert','This is a warning alert')
   }
 
   addDanger():void{
-    this.notifierSvc.onDanger('This is a danger alert','This is a danger alert')
+    this.ngxToastService.onDanger('This is a danger alert','This is a danger alert')
   }
 }
 ```

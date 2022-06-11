@@ -22,60 +22,7 @@ export class NgxToastNotifierService {
     return this.$notifications.value;
   }
 
-  onSuccess(title: string, text: string): void {
-    const notification: INotification = {
-      text,
-      title,
-      icon: 'success',
-      bgColor: this.defaultConfig.config.bgColors?.success
-        ? this.defaultConfig.config.bgColors.success
-        : this.defaultConfig.default.bgColors.success,
-    };
-    this.onShowNotification(notification);
-  }
-
-  onInfo(title: string, text: string): void {
-    const notification: INotification = {
-      text,
-      title,
-      icon: 'info',
-      bgColor: this.defaultConfig.config.bgColors?.info
-        ? this.defaultConfig.config.bgColors.info
-        : this.defaultConfig.default.bgColors.info,
-    };
-    this.onShowNotification(notification);
-  }
-
-  onWarning(title: string, text: string): void {
-    const notification: INotification = {
-      text,
-      title,
-      icon: 'warning',
-      bgColor: this.defaultConfig.config.bgColors?.warning
-        ? this.defaultConfig.config.bgColors.warning
-        : this.defaultConfig.default.bgColors.warning,
-    };
-    this.onShowNotification(notification);
-  }
-
-  onDanger(title: string, text: string): void {
-    const notification: INotification = {
-      text,
-      title,
-      icon: 'danger',
-      bgColor: this.defaultConfig.config.bgColors?.danger
-        ? this.defaultConfig.config.bgColors.danger
-        : this.defaultConfig.default.bgColors.danger,
-    };
-    this.onShowNotification(notification);
-  }
-
-  private onRemove(): void {
-    this.notifications.shift()
-    this.$notifications.next(this.notifications);
-  }
-
-  private onShowNotification(notification: INotification): void {
+  onShowNotification(notification: INotification): void {
     this.$notifications.next([
       ...this.notifications,
       {
@@ -87,4 +34,10 @@ export class NgxToastNotifierService {
       this.onRemove()
     }, this.defaultConfig.config.timeOut ? this.defaultConfig.config.timeOut : this.defaultConfig.default.timeOut);
   }
+
+  private onRemove(): void {
+    this.notifications.shift()
+    this.$notifications.next(this.notifications);
+  }
+
 }

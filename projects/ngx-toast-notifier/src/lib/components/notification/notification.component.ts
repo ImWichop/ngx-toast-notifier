@@ -71,11 +71,13 @@ import { NgxToastNotifierService } from '../../services/ngx-toast-notifier.servi
       .wrap-texts h3 {
         font-size: 16px;
         width: 100%;
+        margin: 0;
       }
 
       .wrap-texts p {
         font-size: 14px;
         width: 100%;
+        margin: 0;
       }
 
       .wrap-notification:hover {

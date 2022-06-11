@@ -51,6 +51,24 @@ import { NgxToastNotifierModule } from 'ngx-toast-notifier';
 class MainModule {}
 ```
 
+
+**step 2:** add the component ngx-toast-notifier in your app.component.html
+
+```html
+<ngx-toast-notifier></ngx-toast-notifier>
+```
+
+## Recomendations
+**Add these styles in your styles.css:**
+
+```scss
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+```
+
 ## Use
 
 ```typescript
